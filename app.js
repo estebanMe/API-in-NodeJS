@@ -8,11 +8,8 @@ var bodyParser = require('body-parser');
 var app = express();
 
 var index = require('./routes/index');
-
 var movie = require('./routes/movie');
-
 var user = require('./routes/user');
-
 var auth = require('./routes/auth');
 
 // uncomment after placing your favicon in /public
@@ -46,6 +43,5 @@ if (app.get('env') === 'development') {
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
 });
-
 
 module.exports = app;
